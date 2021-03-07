@@ -52,9 +52,10 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
+      {/*<BrowserRouter basename="/realTimeChatApp" />*/}
         <Route path="/demo" component={Demo}/>
-        <Changepage path="/" exact />
-        <LoginRoute path="/signin" component={Signin} exact />
+        {/*<Changepage path="/" exact />*/}
+        <LoginRoute path="/" component={Signin} exact />
         <LoginRoute path="/signin" component={Signin} exact />
         <LoginRoute path="/signup" component={Signup} exact />
         <Route path="/messenger/:id?/:cid?" render={() => <Messenger socket={socket} />} exact />
